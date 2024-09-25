@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:root {
+  --darkGrey: #rgb(34, 34, 34);
+  --lightGrey: rgb(109, 109, 109);
+  --veryLightGrey: rgb(227, 227, 227);
+  --blue: rgb(63, 100, 147);
+  --lightBlue: rgb(85, 137, 204);
+}
+
+.fontSize07 {
+  font-size: 0.7rem;
+}
+.fontSize1 {
+  font-size: 1rem;
+}
+.fontSize15 {
+  font-size: 1.5rem;
+}
+.fontSize2 {
+  font-size: 2rem;
+}
+
+#carContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 1rem;
+  /* background-color: red; */
+}
+
+.car {
+  min-width: 300px;
+  flex: 1;
+  border: 1px, solid var(--lightGrey);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carName {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  .motorContainer {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--darkGrey);
+  }
+  .pricesContainer {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    height: 5rem;
+
+    .priceContainer {
+      background-color: var(--veryLightGrey);
+      border-radius: 3px;
+      padding-block: 0.3rem;
+      padding-inline: 1rem;
+      flex: 100%;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      gap: 0.3rem;
+    }
+  }
+
+  .details {
+    display: none;
+  }
+  .extras {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .extra {
+      background-color: var(--veryLightGrey);
+      border-radius: 15px;
+      padding-block: 0.5rem;
+      padding-inline: 0.8rem;
+    }
+  }
+  .consumptionSection {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+
+    .consumptionContainer {
+      display: flex;
+      justify-content: space-between;
+      color: var(--lightGrey);
+    }
+  }
+
+  .detailButton {
+    background-color: var(--blue);
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: white;
+    /* font-size: 4rem; */
+  }
+  .detailButton:hover {
+    background-color: var(--lightBlue);
+  }
+
+  a {
+    text-decoration: none;
+
+    .detailButton {
+      background-color: var(--blue);
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 20px;
+      color: white;
+      /* font-size: 4rem; */
+    }
+  }
+}
+
+/*
+
+ <div class="car">
+          <img
+            src="https://cdn.pixabay.com/photo/2020/09/06/07/37/car-5548242_1280.jpg"
+            alt="" />
+          <p class="carName fontSize1">A 250 e Kompaktlimousine</p>
+          <div class="motorContainer fontSize07">
+            <p class="pS">120 PS</p>
+            <p class="fuelType">Benzin</p>
+            <p class="gearType">Automatik</p>
+          </div>
+          <div class="pricesContainer">
+            <div class="priceContainer">
+              <p class="fontSize07">Kaufpreis</p>
+              <p class="price">€ 46.429,94</p>
+            </div>
+            <div class="priceContainer">
+              <p class="fontSize07">Kaufpreis</p>
+              <p class="price fontSize1">€ 46.429,94</p>
+            </div>
+          </div>
+          <div class="extras">
+            <div class="progressive extra fontSize07">Progressive</div>
+            <div class="ledHighPerformanceLights extra fontSize07">
+              Led High Performance Lights
+            </div>
+            <div class="advancedPakage extra fontSize07">Advanced Pakage</div>
+          </div>
+          <div class="consumptionSection">
+            <div class="consumptionContainer fontSize07">
+              <div>CO2-Emission gesamt</div>
+              <div class="co2Emissions">144 g/km</div>
+            </div>
+            <div class="consumptionContainer fontSize07">
+              <div>Kraftstoffverbrauch</div>
+              <div class="co2Emissions">144 g/km</div>
+            </div>
+          </div>
+          <a href="">
+            <div class="detailButton fontSize15">Details</div>
+          </a>
+        </div>
+
+
+        */
